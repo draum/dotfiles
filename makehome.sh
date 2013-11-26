@@ -23,6 +23,9 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+git submodule init
+git submodule update
+
 cp -R bash-it-overrides/* bash-it
 
 source ~/.bash_profile
