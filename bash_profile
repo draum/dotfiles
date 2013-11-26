@@ -4,7 +4,7 @@
 export PATH=$PATH
 
 # Path to the bash it configuration
-export BASH_IT=$HOME/.bash_it
+export BASH_IT=$HOME/dotfiles/bash-it
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -22,7 +22,6 @@ export NGINX_PATH='/opt/nginx'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
-
 
 # Change this to your console based IRC client of choice.
 export IRC_CLIENT='irssi'
