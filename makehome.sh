@@ -25,4 +25,4 @@ done
 
 cp -R bash-it-overrides/* bash-it
 
-source $dir/.bash_profile
+source ~/.bash_profile
