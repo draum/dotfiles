@@ -30,6 +30,13 @@ git submodule update
  
 cd ..
 
+if [ ! -h ~/.bash_it ]
+then
+    echo -n "Creating symlink to bash-it..."
+    ln -s ~/dotfiles/bash-it ~/.bash_it
+    echo "done"
+fi
+
 echo -n "Copying customizations into bash-it ..."
 cp -R bash-it-overrides/* bash-it
 echo "done"
