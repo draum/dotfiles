@@ -30,6 +30,8 @@ git submodule update
  
 cd ..
 
+echo -n "Copying customizations into bash-it ..."
 cp -R bash-it-overrides/* bash-it
+echo "done"
 
 source ~/.bash_profile
