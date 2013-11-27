@@ -23,8 +23,12 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+cd bash-it
+
 git submodule init
 git submodule update
+ 
+cd ..
 
 cp -R bash-it-overrides/* bash-it
 
