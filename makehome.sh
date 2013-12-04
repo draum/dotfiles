@@ -23,12 +23,7 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-cd bash-it
-
-git submodule init
-git submodule update
- 
-cd ..
+git submodule update --init
 
 if [ ! -h ~/.bash_it ]
 then
@@ -41,4 +36,3 @@ echo -n "Copying customizations into bash-it ..."
 cp -R bash-it-overrides/* bash-it
 echo "done"
 
-source ~/.bash_profile
