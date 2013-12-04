@@ -1,3 +1,5 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -44,9 +46,9 @@ set cursorline  " Highlight current line
 set autoread	" Reload files that have changed
 set guioptions-=T " Hide toolbar
 
-syntax enable
+
 filetype plugin indent on
-colorscheme solarized
+
 
 set laststatus=2
 set statusline=[%l,%v\ %P%M]\ %f\ %y%r%w[%{&ff}]%{fugitive#statusline()}\ %b\ 0x%B
@@ -193,3 +195,6 @@ let g:ctrlp_custom_ignore = {
 			\ 'dir': 'node_modules\|\.git$\|\.hg$\|\.svn$\|^CVS$'
 			\ }
 
+syntax enable
+set background=dark
+colorscheme solarized
