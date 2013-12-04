@@ -11,14 +11,21 @@ export BASH_IT=$HOME/.bash_it
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='zork'
+export BASH_IT_THEME='modern-t'
+
 
 # Your place for hosting Git repos. I use this for private repos.
 export GIT_HOSTING='git@github.com'
 
 # Set my editor and git editor
-export EDITOR="/usr/bin/emacs"
-export GIT_EDITOR='/usr/bin/emacs'
+if [ -f "/usr/bin/emacs" ]; then
+        export EDITOR="/usr/bin/emacs"
+else
+	export EDITOR="vim"
+fi
+	
+export GIT_EDITOR=$EDITOR
+
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
