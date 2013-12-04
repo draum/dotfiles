@@ -13,26 +13,23 @@ export BASH_IT=$HOME/.bash_it
 # location /.bash_it/themes/
 export BASH_IT_THEME='modern-t'
 
-
 # Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@github.com'
+export GIT_HOSTING='draum@github.com'
 
 # Set my editor and git editor
 if [ -f "/usr/bin/emacs" ]; then
-        export EDITOR="/usr/bin/emacs"
+    export EDITOR="/usr/bin/emacs"
 else
-	export EDITOR="vim"
+    export EDITOR="/usr/bin/vim"
 fi
-	
-export GIT_EDITOR=$EDITOR
 
+export GIT_EDITOR=$EDITOR
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
-
 
 # Change this to your console based IRC client of choice.
 

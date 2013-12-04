@@ -3,10 +3,10 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bash_profile vim vimrc"    # list of files/folders to symlink in homedir
+
+files="bash_profile dircolors vim vimrc bashrc"    # list of files/folders to symlink in homedir
 
 ##########
-
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
 echo "done"
@@ -36,3 +36,5 @@ echo -n "Copying customizations into bash-it ..."
 cp -R bash-it-overrides/* bash-it
 echo "done"
 
+
+echo 'Now run "source ~/.bash_profile" to finalize things.'
