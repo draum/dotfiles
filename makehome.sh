@@ -1,5 +1,7 @@
 #!/bin/bash
-########## Variables
+
+# Cheat to update all submodules quickly
+# git submodule foreach "(git checkout master; git pull)&"
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
