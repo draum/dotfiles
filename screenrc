@@ -36,6 +36,8 @@ attrcolor b ".I"
 # (like if the ssh connection times out for example).
 nonblock on
 
+# Always use UTF-8
+defutf8 on
 
 # Window list at the bottom. hostname, centered tabs and redmarked active windows:
 hardstatus alwayslastline

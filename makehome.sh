@@ -6,7 +6,8 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 
-files="bash_profile dircolors vim vimrc bashrc emacs.d"    # list of files/folders to symlink in homedir
+# list of files/folders to symlink in homedir
+files="bash_profile dircolors vim vimrc bashrc emacs.d"    
 
 ##########
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."

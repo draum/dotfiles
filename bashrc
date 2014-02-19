@@ -69,6 +69,11 @@ export CLICOLOR=1
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export GIT_PS1_SHOWUPSTREAM="verbose"
 
+# Make sure we have a UTF-8 locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
 # Turn off ctrl+s
 stty ixany
 stty ixoff -ixon

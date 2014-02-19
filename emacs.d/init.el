@@ -1,3 +1,9 @@
+(defun terminal-init-putty ()
+  "Terminal initialization function for screen."
+   ;; Use the xterm color initialization code.
+   (xterm-register-default-colors)
+   (tty-set-up-initial-frame-faces))
+
 (if (boundp 'image-types)
     nil
     (defvar image-types nil))
