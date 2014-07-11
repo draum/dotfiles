@@ -1,1 +1,0 @@
-/home/draum/.bash_it/plugins/available/nvm.plugin.bash

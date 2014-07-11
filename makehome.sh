@@ -7,7 +7,7 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 
 # list of files/folders to symlink in homedir
-files="bash_profile dircolors vim vimrc bashrc emacs.d"    
+files="zshrc multitailrc dircolors vim vimrc emacs.d"
 
 ##########
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
@@ -28,18 +28,9 @@ for file in $files; do
     fi
 done
 
+# Copy any zsh_custom stuffs
+cp -R $dir/zsh_custom/* ~/.oh-my-zsh/custom
+
 git submodule update --init
 
-if [ ! -h ~/.bash_it ]
-then
-    echo -n "Creating symlink to bash-it..."
-    ln -s ~/dotfiles/bash-it ~/.bash_it
-    echo "done"
-fi
-
-echo -n "Copying customizations into bash-it ..."
-cp -R bash-it-overrides/* bash-it
-echo "done"
-
-
-echo 'Now run "source ~/.bash_profile" to finalize things.'
+echo 'Now run "source ~/.zshrc" to finalize things.'

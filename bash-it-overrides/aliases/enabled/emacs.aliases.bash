@@ -1,1 +1,0 @@
-/home/draum/.bash_it/aliases/available/emacs.aliases.bash
