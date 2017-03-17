@@ -40,7 +40,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git composer common-aliases debian git-flow laravel5 thefuck lol)
+plugins=(git composer common-aliases debian git-flow laravel5 lol)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,3 +89,6 @@ if [[ $host == $staging ]]; then
 elif [[ $host == $development ]]; then
    alias prepdb='ant prepdb -Dbuild.env=development'
 fi
+
+[ -r /usr/local/rvm/scripts/rvm ] && source /usr/local/rvm/scripts/rvm
+export PATH="$PATH:$HOME/.rvm/bin"
