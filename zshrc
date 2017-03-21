@@ -1,4 +1,14 @@
 # Path to your oh-my-zsh installation.
+
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export TERM="xterm-256color"
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
@@ -40,13 +50,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git composer common-aliases debian git-flow laravel5 thefuck lol)
+plugins=(git composer common-aliases debian laravel5 thefuck lol)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/home/draum/.rbenv/bin:/usr/bin:./node_modules/.bin:/usr/local/rvm/gems/ruby-1.9.3-p484/bin:/usr/local/rvm/gems/ruby-1.9.3-p484@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p484/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -57,13 +66,6 @@ if [ -f "/usr/bin/emacs" ]; then
 else
     export EDITOR="vim"
 fi
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -89,3 +91,7 @@ if [[ $host == $staging ]]; then
 elif [[ $host == $development ]]; then
    alias prepdb='ant prepdb -Dbuild.env=development'
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+[ -r /usr/local/rvm/scripts/rvm ] && source /usr/local/rvm/scripts/rvm
+export PATH="$PATH:$HOME/.rvm/bin"
